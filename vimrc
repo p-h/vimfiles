@@ -123,7 +123,7 @@ if has('gui_running')
 endif
 
 " Bindings
-cnoremap vr tabedit ~/.vim
+cnoremap vr<CR> tabedit ~/.vim<CR>
 nnoremap <leader>c :set relativenumber<CR>
 nnoremap <Space> :
 nnoremap <F7> :GundoToggle<CR>
