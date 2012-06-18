@@ -121,11 +121,13 @@ if has('gui_running')
 endif
 
 " Bindings
-cnoremap vr<CR> tabedit ~/.vim<CR>
 nnoremap <leader>c :set relativenumber<CR>
 nnoremap <Space> :
 nnoremap <F7> :GundoToggle<CR>
 nnoremap  <F8> :TagbarToggle<CR>
+
+" user defined commands
+command Vr tabedit ~/.vim/vimrc
 
 " local vimrc
 call localrc#load('.local.vimrc', getcwd())
