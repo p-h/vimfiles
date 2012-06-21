@@ -126,6 +126,8 @@ nnoremap <Space> :
 nnoremap <F7> :GundoToggle<CR>
 nnoremap  <F8> :TagbarToggle<CR>
 
+inoremap jj <Esc>
+
 " user defined commands
 command Vr tabedit ~/.vim/vimrc
 
