@@ -30,6 +30,7 @@ Bundle 'leshill/vim-json'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'majutsushi/tagbar'
 Bundle 'mileszs/ack.vim'
+Bundle 'Nemo157/glsl.vim'
 Bundle 'nsf/gocode', {'rtp': 'vim/'}
 Bundle 'nvie/vim-flake8'
 Bundle 'othree/html5.vim'
