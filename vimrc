@@ -18,7 +18,6 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'ap/vim-css-color'
 Bundle 'avakhov/vim-yaml'
 "Bundle 'digitaltoad/vim-jade'
-Bundle 'drmingdrmer/xptemplate'
 Bundle 'ervandew/supertab'
 Bundle 'fmoralesc/vim-pad'
 Bundle 'fs111/pydoc.vim'
@@ -56,17 +55,6 @@ set laststatus=2
 
 " avoid key conflict
 let g:SuperTabMappingForward = '<Plug>supertabKey'
-
-" xpt settings
-let g:xptemplate_fallback = '<Plug>supertabKey'
-let g:xptemplate_vars="$email=phihue@gmail.com&$author=Philippe Huerlimann"
-set runtimepath+=~/.vim/xpt_personal
-
-" xpt uses <Tab> as trigger key
-let g:xptemplate_key = '<Tab>'
-
-" use <tab>/<S-tab> to navigate through pum. Optional
-let g:xptemplate_pum_tab_nav = 1
 
 " powerline settings
 let g:Powerline_symbols = 'unicode'
