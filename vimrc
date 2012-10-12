@@ -18,7 +18,6 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'ap/vim-css-color'
 Bundle 'avakhov/vim-yaml'
 "Bundle 'digitaltoad/vim-jade'
-Bundle 'ervandew/supertab'
 Bundle 'fmoralesc/vim-pad'
 Bundle 'fs111/pydoc.vim'
 "Bundle 'guileen/vim-node'
@@ -52,9 +51,6 @@ let mapleader = ","
 
 " Always show the statusline
 set laststatus=2
-
-" avoid key conflict
-let g:SuperTabMappingForward = '<Plug>supertabKey'
 
 " powerline settings
 let g:Powerline_symbols = 'unicode'
