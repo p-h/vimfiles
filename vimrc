@@ -17,6 +17,7 @@ Bundle 'gmarik/vundle'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'ap/vim-css-color'
 Bundle 'avakhov/vim-yaml'
+Bundle 'eagletmt/ghcmod-vim'
 Bundle 'fmoralesc/vim-pad'
 Bundle 'fs111/pydoc.vim'
 Bundle 'kien/ctrlp.vim'
@@ -32,6 +33,7 @@ Bundle 'othree/html5.vim'
 Bundle 'Raimondi/delimitMate'
 Bundle 'Rip-Rip/clang_complete'
 Bundle 'scrooloose/nerdcommenter'
+Bundle 'Shougo/vimproc'
 Bundle 'sjl/gundo.vim'
 Bundle 'thinca/vim-localrc'
 Bundle 'tpope/vim-fugitive'
@@ -39,6 +41,7 @@ Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround.git'
 Bundle 'matchit.zip'
 Bundle 'slimv.vim'
+Bundle "ujihisa/neco-ghc"
 
 " set leader <Leader>
 let mapleader = ","
