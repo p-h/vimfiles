@@ -39,9 +39,9 @@ Bundle 'thinca/vim-localrc'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround.git'
+Bundle "ujihisa/neco-ghc"
 Bundle 'matchit.zip'
 Bundle 'slimv.vim'
-Bundle "ujihisa/neco-ghc"
 
 " set leader <Leader>
 let mapleader = ","
