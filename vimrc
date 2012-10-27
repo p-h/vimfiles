@@ -29,7 +29,6 @@ Bundle 'Nemo157/glsl.vim'
 Bundle 'nsf/gocode', {'rtp': 'vim/'}
 Bundle 'nvie/vim-flake8'
 Bundle 'othree/html5.vim'
-"Bundle 'pangloss/vim-javascript'
 Bundle 'Raimondi/delimitMate'
 Bundle 'Rip-Rip/clang_complete'
 Bundle 'scrooloose/nerdcommenter'
