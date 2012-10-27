@@ -39,6 +39,7 @@ Bundle 'thinca/vim-localrc'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround.git'
+Bundle 'Twinside/vim-hoogle'
 Bundle "ujihisa/neco-ghc"
 Bundle 'matchit.zip'
 Bundle 'slimv.vim'
