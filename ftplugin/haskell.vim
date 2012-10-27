@@ -1,5 +1,5 @@
 setlocal omnifunc=necoghc#omnifunc
 
-nnoremap <leader>f :GhcModCheck<CR>
-nnoremap <leader>l :GhcModLint<CR>
+autocmd BufWritePost *.hs GhcModCheckAndLintAsync
+
 nnoremap <leader>i :GhcModTypeInsert<CR>
