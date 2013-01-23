@@ -42,8 +42,9 @@ Bundle 'ujihisa/neco-ghc'
 Bundle 'matchit.zip'
 Bundle 'slimv.vim'
 
-" set leader <Leader>
+" set leader and local leader
 let mapleader = ","
+let maplocalleader = "_"
 
 " Always show the statusline
 set laststatus=2
