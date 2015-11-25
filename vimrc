@@ -5,43 +5,38 @@ filetype off
 " make vundle use git:// instead of http{,s}://
 " makes things a lot faster
 let g:vundle_default_git_proto = 'git'
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim/
+call vundle#begin()
 
 " Bundles to install
 " let Vundle manage Vundle
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
 " Plugins
 " The ones that I currently don't use are commented out
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'ap/vim-css-color'
-Bundle 'avakhov/vim-yaml'
-Bundle 'eagletmt/ghcmod-vim'
-Bundle 'fmoralesc/vim-pad'
-Bundle 'fs111/pydoc.vim'
-Bundle 'kien/ctrlp.vim'
-Bundle 'leshill/vim-json'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'majutsushi/tagbar'
-Bundle 'mileszs/ack.vim'
-Bundle 'Nemo157/glsl.vim'
-Bundle 'nsf/gocode', {'rtp': 'vim/'}
-Bundle 'nvie/vim-flake8'
-Bundle 'othree/html5.vim'
-Bundle 'pbrisbin/html-template-syntax'
-Bundle 'Raimondi/delimitMate'
-Bundle 'Rip-Rip/clang_complete'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'Shougo/vimproc'
-Bundle 'SirVer/ultisnips'
-Bundle 'thinca/vim-localrc'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-repeat'
-Bundle 'tpope/vim-surround.git'
-Bundle 'ujihisa/neco-ghc'
-Bundle 'matchit.zip'
-Bundle 'slimv.vim'
+Plugin 'ap/vim-css-color'
+Plugin 'avakhov/vim-yaml'
+Plugin 'davidhalter/jedi-vim'
+Plugin 'eagletmt/ghcmod-vim'
+Plugin 'eagletmt/neco-ghc'
+Plugin 'kien/ctrlp.vim'
+Plugin 'kovisoft/slimv'
+Plugin 'leshill/vim-json'
+Plugin 'majutsushi/tagbar'
+Plugin 'matchit.zip'
+Plugin 'nsf/gocode', {'rtp': 'vim/'}
+Plugin 'othree/html5.vim'
+Plugin 'pbrisbin/html-template-syntax'
+Plugin 'Raimondi/delimitMate'
+Plugin 'Rip-Rip/clang_complete'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'Shougo/vimproc'
+Plugin 'thinca/vim-localrc'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-surround.git'
+
+call vundle#end()
 
 " set leader and local leader
 let mapleader = ","
@@ -69,9 +64,9 @@ filetype plugin indent on
 
 " colors
 " solarized.vim exists
-let g:solarized_termcolors=256
-colorscheme solarized
-set background=dark
+"let g:solarized_termcolors=256
+"colorscheme solarized
+"set background=dark
 
 syntax on
 
@@ -87,9 +82,6 @@ set incsearch
 " smartsearch
 set ignorecase
 set smartcase
-
-" folding
-set foldmethod=syntax
 
 " tab settings
 set expandtab
