@@ -10,7 +10,7 @@ call vundle#begin()
 
 " Bundles to install
 " let Vundle manage Vundle
-Plugin 'gmarik/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim'
 
 " Plugins
 " The ones that I currently don't use are commented out
