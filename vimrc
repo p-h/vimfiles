@@ -52,7 +52,11 @@ let g:Powerline_symbols = 'unicode'
 
 " Delimate settings
 " expand newline and spaces
-let delimitMate_expand_cr = 1
+if has("win32")
+    let delimitMate_expand_cr = 0
+else
+    let delimitMate_expand_cr = 1
+endif
 let delimitMate_expand_space = 1
 
 " set lines horizontal and vertical line for the cursor
@@ -89,6 +93,8 @@ set smarttab
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
+
+set nobackup
 
 " gui options
 if has('gui_running')
