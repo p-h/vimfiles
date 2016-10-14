@@ -34,7 +34,6 @@ Plugin 'Rip-Rip/clang_complete'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'Shougo/vimproc'
 Plugin 'sirver/ultisnips'
-Plugin 'thinca/vim-localrc'
 Plugin 'tpope/vim-classpath'
 Plugin 'tpope/vim-fireplace'
 Plugin 'tpope/vim-fugitive'
@@ -52,18 +51,6 @@ let maplocalleader = "_"
 " Always show the statusline
 set laststatus=2
 
-" powerline settings
-let g:Powerline_symbols = 'unicode'
-" Sadly I can't get this costum font to work
-"let g:Powerline_symbols = 'fancy' 
-
-" Delimate settings
-" expand newline and spaces
-if has("win32")
-    let delimitMate_expand_cr = 0
-else
-    let delimitMate_expand_cr = 1
-endif
 let delimitMate_expand_space = 1
 
 " set lines horizontal and vertical line for the cursor
@@ -106,18 +93,10 @@ if has('gui_running')
 endif
 
 " Bindings
-nnoremap <leader>c :set relativenumber<CR>
-nnoremap <Space> :
-nnoremap <F7> :GundoToggle<CR>
 nnoremap  <F8> :TagbarToggle<CR>
-
-inoremap jj <Esc>
 
 " user defined commands
 command Vr tabedit ~/.vim/vimrc
-
-" local vimrc
-call localrc#load('.local.vimrc', getcwd())
 
 " ctrlp should change working directory
 let g:ctrlp_working_path_mode = 0
