@@ -16,6 +16,7 @@ Plugin 'VundleVim/Vundle.vim'
 " The ones that I currently don't use are commented out
 Plugin 'ap/vim-css-color'
 Plugin 'avakhov/vim-yaml'
+Plugin 'bitterjug/vim-colors-bitterjug'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'eagletmt/ghcmod-vim'
 Plugin 'eagletmt/neco-ghc'
@@ -72,11 +73,8 @@ set cursorline
 " turn on filetype specific stuff
 filetype plugin indent on
 
-" colors
-" solarized.vim exists
-"let g:solarized_termcolors=256
-"colorscheme solarized
-"set background=dark
+colorscheme bitterjug
+set background=light
 
 syntax on
 
