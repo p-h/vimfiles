@@ -22,6 +22,7 @@ Plugin 'eagletmt/neco-ghc'
 Plugin 'honza/vim-snippets'
 Plugin 'kien/ctrlp.vim'
 Plugin 'leshill/vim-json'
+Plugin 'luochen1990/rainbow'
 Plugin 'majutsushi/tagbar'
 Plugin 'matchit.zip'
 Plugin 'nsf/gocode', {'rtp': 'vim/'}
@@ -40,6 +41,8 @@ Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround.git'
 
 call vundle#end()
+
+let g:rainbow_active = 1
 
 " set leader and local leader
 let mapleader = ","
