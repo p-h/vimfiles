@@ -1,1 +1,1 @@
-nnoremap <c-c><c-k> :Require<cr>
+nnoremap <c-c><c-k> :write <cr> :Require<cr>
