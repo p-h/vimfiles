@@ -28,6 +28,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'matchit.zip'
 Plugin 'nsf/gocode', {'rtp': 'vim/'}
 Plugin 'othree/html5.vim'
+Plugin 'paredit.vim'
 Plugin 'pbrisbin/html-template-syntax'
 Plugin 'Raimondi/delimitMate'
 Plugin 'Rip-Rip/clang_complete'
