@@ -98,6 +98,7 @@ nnoremap  <F8> :TagbarToggle<CR>
 
 " user defined commands
 command Vr tabedit ~/.vim/vimrc
+command Vt execute "tabedit ~/.vim/ftplugin/" . &filetype . ".vim"
 
 " ctrlp should change working directory
 let g:ctrlp_working_path_mode = 0
