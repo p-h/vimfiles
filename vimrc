@@ -43,6 +43,8 @@ Plugin 'tpope/vim-surround.git'
 
 call vundle#end()
 
+let g:UltiSnipsListSnippets="<c-l>"
+
 let g:rainbow_active = 1
 
 " set leader and local leader
