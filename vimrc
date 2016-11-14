@@ -26,6 +26,7 @@ Plugin 'leshill/vim-json'
 Plugin 'luochen1990/rainbow'
 Plugin 'majutsushi/tagbar'
 Plugin 'matchit.zip'
+Plugin 'mileszs/ack.vim'
 Plugin 'nsf/gocode', {'rtp': 'vim/'}
 Plugin 'othree/html5.vim'
 Plugin 'paredit.vim'
@@ -42,6 +43,8 @@ Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround.git'
 
 call vundle#end()
+
+let g:ackprg = "ag --vimgrep"
 
 let g:UltiSnipsListSnippets="<c-l>"
 
