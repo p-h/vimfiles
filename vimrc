@@ -50,7 +50,6 @@ let g:UltiSnipsListSnippets="<c-l>"
 
 let g:rainbow_active = 1
 
-" set leader and local leader
 let mapleader = ","
 let maplocalleader = "_"
 
@@ -63,7 +62,6 @@ let delimitMate_expand_space = 1
 set cursorcolumn
 set cursorline
 
-" turn on filetype specific stuff
 filetype plugin indent on
 
 colorscheme bitterjug
@@ -71,20 +69,13 @@ set background=light
 
 syntax on
 
-" turn on those nice numbers on the left side
 set number
-
-" and make them relative
 set relativenumber
 
-"Incremental search
 set incsearch
-
-" smartsearch
 set ignorecase
 set smartcase
 
-" tab settings
 set expandtab
 set smarttab
 set tabstop=4
@@ -93,17 +84,13 @@ set softtabstop=4
 
 set nobackup
 
-" gui options
 if has('gui_running')
     set guioptions=aAceif
 endif
 
-" Bindings
 nnoremap  <F8> :TagbarToggle<CR>
 
-" user defined commands
 command Vr tabedit ~/.vim/vimrc
 command Vt execute "tabedit ~/.vim/ftplugin/" . &filetype . ".vim"
 
-" ctrlp should change working directory
 let g:ctrlp_working_path_mode = 0
