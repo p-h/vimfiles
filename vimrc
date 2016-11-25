@@ -89,6 +89,7 @@ if has('gui_running')
 endif
 
 nnoremap  <F8> :TagbarToggle<CR>
+nnoremap <F3> :%s/\C\<<C-r><C-w>\>/
 
 command Vr tabedit ~/.vim/vimrc
 command Vt execute "tabedit ~/.vim/ftplugin/" . &filetype . ".vim"
