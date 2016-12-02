@@ -20,6 +20,7 @@ Plugin 'bitterjug/vim-colors-bitterjug'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'eagletmt/ghcmod-vim'
 Plugin 'eagletmt/neco-ghc'
+Plugin 'golang/lint', {'rtp': 'misc/vim'}
 Plugin 'honza/vim-snippets'
 Plugin 'kien/ctrlp.vim'
 Plugin 'leshill/vim-json'
