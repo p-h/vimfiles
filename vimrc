@@ -88,6 +88,10 @@ set softtabstop=4
 
 set nobackup
 
+
+set foldenable
+set foldmethod=syntax
+
 if has('gui_running')
     set guioptions=aAceif
 endif
