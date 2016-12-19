@@ -37,6 +37,7 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'Rip-Rip/clang_complete'
 Plugin 'rust-lang/rust.vim'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdtree'
 Plugin 'Shougo/vimproc'
 Plugin 'sirver/ultisnips'
 Plugin 'tpope/vim-classpath'
@@ -119,6 +120,7 @@ if has("cscope")
     nnoremap <leader>a :cscope find a <cword><CR>
 endif
 
+nnoremap <C-S-N> :NERDTreeToggle<CR>
 nnoremap  <F8> :TagbarToggle<CR>
 nnoremap <F3> :%s/\C\<<C-r><C-w>\>/
 
