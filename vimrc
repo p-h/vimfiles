@@ -95,4 +95,7 @@ nnoremap <F3> :%s/\C\<<C-r><C-w>\>/
 command Vr tabedit ~/.vim/vimrc
 command Vt execute "tabedit ~/.vim/ftplugin/" . &filetype . ".vim"
 
+set colorcolumn=80
+highlight ColorColumn ctermbg=red
+
 let g:ctrlp_working_path_mode = 0
