@@ -92,6 +92,29 @@ if has('gui_running')
     set guioptions=aAceif
 endif
 
+if has("cscope")
+    set csto=0
+    set cst
+    set nocsverb
+    if filereadable("cscope.out")
+        cs add cscope.out
+    elseif $CSCOPE_DB != ""
+        cs add $CSCOPE_DB
+    endif
+    set csverb
+
+    "s: Find this C symbol
+    "g: Find this definition
+    "d: Find functions called by this function
+    "c: Find functions calling this function
+    "a: Find places where this symbol is assigned a value
+    nnoremap <leader>s :cscope find s <cword><CR>
+    nnoremap <leader>g :cscope find g <cword><CR>
+    nnoremap <leader>d :cscope find d <cword><CR>
+    nnoremap <leader>c :cscope find c <cword><CR>
+    nnoremap <leader>a :cscope find a <cword><CR>
+endif
+
 nnoremap  <F8> :TagbarToggle<CR>
 nnoremap <F3> :%s/\C\<<C-r><C-w>\>/
 
