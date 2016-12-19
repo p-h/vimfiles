@@ -44,6 +44,7 @@ Plugin 'tpope/vim-fireplace'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround.git'
+Plugin 'vim-scripts/a.vim'
 
 call vundle#end()
 
