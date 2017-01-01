@@ -80,6 +80,7 @@ set relativenumber
 set incsearch
 set ignorecase
 set smartcase
+set hlsearch
 
 set expandtab
 set smarttab
