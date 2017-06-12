@@ -90,6 +90,7 @@ set softtabstop=4
 
 set nobackup
 
+set hlsearch
 
 set foldenable
 set foldmethod=syntax
