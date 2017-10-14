@@ -71,7 +71,6 @@ set cursorline
 filetype plugin indent on
 
 colorscheme bitterjug
-set background=light
 
 syntax on
 
@@ -92,9 +91,6 @@ set softtabstop=4
 set nobackup
 
 set hlsearch
-
-set foldenable
-set foldmethod=syntax
 
 if has('gui_running')
     set guioptions=aAceif
