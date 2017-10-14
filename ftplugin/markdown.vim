@@ -1,1 +1,4 @@
-set tw=72 spell spelllang=de_ch
+set tw=72
+set spell
+set spelllang=de_ch
+set colorcolumn=73
