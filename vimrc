@@ -21,8 +21,6 @@ Plugin 'davidhalter/jedi-vim'
 Plugin 'dhruvasagar/vim-table-mode'
 Plugin 'eagletmt/ghcmod-vim'
 Plugin 'eagletmt/neco-ghc'
-Plugin 'fatih/vim-go'
-Plugin 'golang/lint', {'rtp': 'misc/vim'}
 Plugin 'honza/vim-snippets'
 Plugin 'kien/ctrlp.vim'
 Plugin 'leshill/vim-json'
