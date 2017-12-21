@@ -1,4 +1,3 @@
-" Vundle setup
 set nocompatible
 filetype off
 
@@ -8,12 +7,8 @@ let g:vundle_default_git_proto = 'git'
 set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#begin()
 
-" Bundles to install
-" let Vundle manage Vundle
 Plugin 'VundleVim/Vundle.vim'
 
-" Plugins
-" The ones that I currently don't use are commented out
 Plugin 'ap/vim-css-color'
 Plugin 'avakhov/vim-yaml'
 Plugin 'bitterjug/vim-colors-bitterjug'
@@ -50,12 +45,10 @@ let g:rainbow_active = 1
 let mapleader = ","
 let maplocalleader = "_"
 
-" Always show the statusline
 set laststatus=2
 
 let delimitMate_expand_space = 1
 
-" set lines horizontal and vertical line for the cursor
 set cursorcolumn
 set cursorline
 
