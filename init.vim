@@ -1,42 +1,41 @@
-set nocompatible
-filetype off
+set runtimepath^=/usr/share/vim/vimfiles
 
-" make vundle use git:// instead of http{,s}://
-" makes things a lot faster
-let g:vundle_default_git_proto = 'git'
-set rtp+=~/.vim/bundle/Vundle.vim/
-call vundle#begin()
+call plug#begin('~/.local/share/nvim/plugged')
 
-Plugin 'VundleVim/Vundle.vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'ap/vim-css-color'
+Plug 'autozimu/LanguageClient-neovim'
+Plug 'avakhov/vim-yaml'
+Plug 'bitterjug/vim-colors-bitterjug'
+Plug 'davidhalter/jedi-vim'
+Plug 'dhruvasagar/vim-table-mode'
+Plug 'honza/vim-snippets'
+Plug 'kien/ctrlp.vim'
+Plug 'leshill/vim-json'
+Plug 'luochen1990/rainbow'
+Plug 'majutsushi/tagbar'
+Plug 'mileszs/ack.vim'
+Plug 'pbrisbin/html-template-syntax'
+Plug 'Raimondi/delimitMate'
+Plug 'rhysd/vim-clang-format'
+Plug 'rust-lang-nursery/rls'
+Plug 'rust-lang/rust.vim'
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'sirver/ultisnips'
+Plug 'tpope/vim-classpath'
+Plug 'tpope/vim-fireplace'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'vim-scripts/a.vim'
+Plug 'vim-scripts/matchit.zip'
+Plug 'vim-scripts/paredit.vim'
 
-Plugin 'airblade/vim-gitgutter'
-Plugin 'ap/vim-css-color'
-Plugin 'avakhov/vim-yaml'
-Plugin 'bitterjug/vim-colors-bitterjug'
-Plugin 'davidhalter/jedi-vim'
-Plugin 'dhruvasagar/vim-table-mode'
-Plugin 'honza/vim-snippets'
-Plugin 'kien/ctrlp.vim'
-Plugin 'leshill/vim-json'
-Plugin 'luochen1990/rainbow'
-Plugin 'majutsushi/tagbar'
-Plugin 'matchit.zip'
-Plugin 'mileszs/ack.vim'
-Plugin 'paredit.vim'
-Plugin 'pbrisbin/html-template-syntax'
-Plugin 'Raimondi/delimitMate'
-Plugin 'rhysd/vim-clang-format'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'scrooloose/nerdtree'
-Plugin 'sirver/ultisnips'
-Plugin 'tpope/vim-classpath'
-Plugin 'tpope/vim-fireplace'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-surround.git'
-Plugin 'vim-scripts/a.vim'
+call plug#end()
 
-call vundle#end()
+let g:deoplete#enable_at_startup = 1
 
 let g:ackprg = "ag --vimgrep"
 
@@ -54,11 +53,7 @@ let delimitMate_expand_space = 1
 set cursorcolumn
 set cursorline
 
-filetype plugin indent on
-
 colorscheme bitterjug
-
-syntax on
 
 set number
 set relativenumber
@@ -77,10 +72,6 @@ set softtabstop=4
 set nobackup
 
 set hlsearch
-
-if has('gui_running')
-    set guioptions=aAceif
-endif
 
 if has("cscope")
     set csto=0
@@ -106,11 +97,11 @@ if has("cscope")
 endif
 
 nnoremap <C-S-N> :NERDTreeToggle<CR>
-nnoremap  <F8> :TagbarToggle<CR>
+nnoremap <F8> :TagbarToggle<CR>
 nnoremap <F3> :%s/\C\<<C-r><C-w>\>/
 
-command Vr tabedit ~/.vim/vimrc
-command Vt execute "tabedit ~/.vim/ftplugin/" . &filetype . ".vim"
+command Vr tabedit ~/.config/nvim/init.vim
+command Vt execute "tabedit ~/.config/nvim/ftplugin/" . &filetype . ".vim"
 
 set colorcolumn=100
 highlight ColorColumn ctermbg=red
