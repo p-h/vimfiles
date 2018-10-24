@@ -15,8 +15,6 @@ Plugin 'avakhov/vim-yaml'
 Plugin 'bitterjug/vim-colors-bitterjug'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'dhruvasagar/vim-table-mode'
-Plugin 'eagletmt/ghcmod-vim'
-Plugin 'eagletmt/neco-ghc'
 Plugin 'honza/vim-snippets'
 Plugin 'kien/ctrlp.vim'
 Plugin 'leshill/vim-json'
@@ -28,12 +26,8 @@ Plugin 'paredit.vim'
 Plugin 'pbrisbin/html-template-syntax'
 Plugin 'Raimondi/delimitMate'
 Plugin 'rhysd/vim-clang-format'
-Plugin 'roxma/nvim-yarp'
-Plugin 'roxma/vim-hug-neovim-rpc'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
-Plugin 'Shougo/deoplete.nvim'
-Plugin 'Shougo/vimproc'
 Plugin 'sirver/ultisnips'
 Plugin 'tpope/vim-classpath'
 Plugin 'tpope/vim-fireplace'
@@ -43,8 +37,6 @@ Plugin 'tpope/vim-surround.git'
 Plugin 'vim-scripts/a.vim'
 
 call vundle#end()
-
-call deoplete#enable()
 
 let g:ackprg = "ag --vimgrep"
 
