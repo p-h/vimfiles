@@ -4,7 +4,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'airblade/vim-gitgutter'
 Plug 'ap/vim-css-color'
-Plug 'autozimu/LanguageClient-neovim'
+Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
 Plug 'avakhov/vim-yaml'
 Plug 'bitterjug/vim-colors-bitterjug'
 Plug 'davidhalter/jedi-vim'
@@ -15,6 +15,7 @@ Plug 'leshill/vim-json'
 Plug 'luochen1990/rainbow'
 Plug 'majutsushi/tagbar'
 Plug 'mileszs/ack.vim'
+Plug 'OmniSharp/omnisharp-vim'
 Plug 'pbrisbin/html-template-syntax'
 Plug 'Raimondi/delimitMate'
 Plug 'rhysd/vim-clang-format'
@@ -32,10 +33,13 @@ Plug 'tpope/vim-surround'
 Plug 'vim-scripts/a.vim'
 Plug 'vim-scripts/matchit.zip'
 Plug 'vim-scripts/paredit.vim'
+Plug 'w0rp/ale'
 
 call plug#end()
 
 let g:deoplete#enable_at_startup = 1
+
+let g:OmniSharp_server_use_mono = 1
 
 let g:ackprg = "ag --vimgrep"
 
@@ -47,6 +51,19 @@ let mapleader = ","
 let maplocalleader = "_"
 
 set laststatus=2
+
+set hidden
+
+let g:LanguageClient_serverCommands = {
+    \ 'rust': ['rustup', 'run', 'stable', 'rls'],
+    \ 'haskell': ['hie-wrapper'],
+    \}
+
+nnoremap <F5> :call LanguageClient_contextMenu()<CR>
+nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
+nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
+nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
+nnoremap <silent> <M-CR> call LanguageClient#textDocument_codeAction()<CR>
 
 let delimitMate_expand_space = 1
 
