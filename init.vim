@@ -7,7 +7,6 @@ Plug 'ap/vim-css-color'
 Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
 Plug 'avakhov/vim-yaml'
 Plug 'bitterjug/vim-colors-bitterjug'
-Plug 'davidhalter/jedi-vim'
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'honza/vim-snippets'
 Plug 'junegunn/vim-easy-align'
@@ -57,8 +56,9 @@ set laststatus=2
 set hidden
 
 let g:LanguageClient_serverCommands = {
-    \ 'rust': ['rustup', 'run', 'stable', 'rls'],
     \ 'haskell': ['hie-wrapper'],
+    \ 'python': ['pyls'],
+    \ 'rust': ['rustup', 'run', 'stable', 'rls'],
     \}
 
 nnoremap <F5> :call LanguageClient_contextMenu()<CR>
