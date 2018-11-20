@@ -10,7 +10,9 @@ Plug 'bitterjug/vim-colors-bitterjug'
 Plug 'davidhalter/jedi-vim'
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'honza/vim-snippets'
+Plug 'junegunn/vim-easy-align'
 Plug 'kien/ctrlp.vim'
+Plug 'lervag/vimtex'
 Plug 'leshill/vim-json'
 Plug 'luochen1990/rainbow'
 Plug 'majutsushi/tagbar'
@@ -116,6 +118,8 @@ endif
 nnoremap <C-S-N> :NERDTreeToggle<CR>
 nnoremap <F8> :TagbarToggle<CR>
 nnoremap <F3> :%s/\C\<<C-r><C-w>\>/
+
+nmap ga <Plug>(EasyAlign)
 
 command Vr tabedit ~/.config/nvim/init.vim
 command Vt execute "tabedit ~/.config/nvim/ftplugin/" . &filetype . ".vim"
