@@ -8,7 +8,6 @@ Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.s
 Plug 'avakhov/vim-yaml'
 Plug 'bitterjug/vim-colors-bitterjug'
 Plug 'dhruvasagar/vim-table-mode'
-Plug 'honza/vim-snippets'
 Plug 'junegunn/vim-easy-align'
 Plug 'kien/ctrlp.vim'
 Plug 'lervag/vimtex'
@@ -25,7 +24,8 @@ Plug 'rust-lang/rust.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'sirver/ultisnips'
+Plug 'Shougo/neosnippet-snippets'
+Plug 'Shougo/neosnippet.vim'
 Plug 'tpope/vim-classpath'
 Plug 'tpope/vim-fireplace'
 Plug 'tpope/vim-fugitive'
@@ -43,8 +43,6 @@ let g:deoplete#enable_at_startup = 1
 let g:OmniSharp_server_use_mono = 1
 
 let g:ackprg = "ag --vimgrep"
-
-let g:UltiSnipsListSnippets="<c-l>"
 
 let g:rainbow_active = 1
 
@@ -66,6 +64,10 @@ nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
 nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
 nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
 nnoremap <silent> <M-CR> call LanguageClient#textDocument_codeAction()<CR>
+
+imap <C-k> <Plug>(neosnippet_expand_or_jump)
+smap <C-k> <Plug>(neosnippet_expand_or_jump)
+xmap <C-k> <Plug>(neosnippet_expand_target)
 
 let delimitMate_expand_space = 1
 
