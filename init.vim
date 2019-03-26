@@ -1,5 +1,7 @@
 set runtimepath^=/usr/share/vim/vimfiles
 
+autocmd BufRead,BufNewFile *.h set filetype=c
+
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'airblade/vim-gitgutter'
@@ -54,6 +56,7 @@ set laststatus=2
 set hidden
 
 let g:LanguageClient_serverCommands = {
+    \ 'c': ['ccls', '--log-file=/tmp/cc.log'],
     \ 'haskell': ['hie-wrapper'],
     \ 'python': ['pyls'],
     \ 'rust': ['rustup', 'run', 'stable', 'rls'],
