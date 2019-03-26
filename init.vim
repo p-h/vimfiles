@@ -129,7 +129,7 @@ nmap ga <Plug>(EasyAlign)
 command Vr tabedit ~/.config/nvim/init.vim
 command Vt execute "tabedit ~/.config/nvim/ftplugin/" . &filetype . ".vim"
 
-set colorcolumn=100
+set colorcolumn=80
 highlight ColorColumn ctermbg=red
 
 let g:ctrlp_custom_ignore = 'node_modules\|git'
