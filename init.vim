@@ -65,10 +65,14 @@ let g:LanguageClient_serverCommands = {
     \}
 
 nnoremap <F5> :call LanguageClient_contextMenu()<CR>
-nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
-nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
 nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
-nnoremap <silent> <M-CR> call LanguageClient#textDocument_codeAction()<CR>
+nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
+nnoremap <buffer> <silent> gD <c-w>v:call LanguageClient#textDocument_definition()<CR>
+nnoremap <Leader>la :call LanguageClient#textDocument_codeAction()<CR>
+nnoremap <Leader>lb :call LanguageClient#textDocument_references()<CR>
+nnoremap <Leader>lf :call LanguageClient#textDocument_formatting()<CR>
+nnoremap <Leader>lk :call LanguageClient#textDocument_hover()<CR>
+nnoremap <Leader>ls :call LanguageClient#textDocument_documentSymbol()<CR>
 
 imap <C-k> <Plug>(neosnippet_expand_or_jump)
 smap <C-k> <Plug>(neosnippet_expand_or_jump)
