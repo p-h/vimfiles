@@ -43,7 +43,7 @@ let g:deoplete#enable_at_startup = 1
 
 let g:OmniSharp_server_use_mono = 1
 
-let g:ackprg = "ag --vimgrep"
+let g:ackprg = "rg --vimgrep"
 
 let g:rainbow_active = 1
 
