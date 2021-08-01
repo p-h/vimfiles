@@ -10,6 +10,7 @@ Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.s
 Plug 'avakhov/vim-yaml'
 Plug 'bitterjug/vim-colors-bitterjug'
 Plug 'dhruvasagar/vim-table-mode'
+Plug 'jpalardy/vim-slime'
 Plug 'junegunn/vim-easy-align'
 Plug 'kien/ctrlp.vim'
 Plug 'lervag/vimtex'
@@ -46,6 +47,10 @@ let g:OmniSharp_server_use_mono = 1
 let g:ackprg = "rg --vimgrep"
 
 let g:rainbow_active = 1
+
+let g:slime_target = "tmux"
+let g:slime_paste_file = tempname()
+let g:slime_default_config = {"socket_name": get(split($TMUX, ","), 0), "target_pane": ":.2"}
 
 let mapleader = ","
 let maplocalleader = "_"
