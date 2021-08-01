@@ -42,6 +42,8 @@ call plug#end()
 
 let g:deoplete#enable_at_startup = 1
 
+let g:tex_flavor = 'latex'
+
 let g:OmniSharp_server_use_mono = 1
 
 let g:ackprg = "rg --vimgrep"
