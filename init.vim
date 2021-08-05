@@ -65,8 +65,8 @@ set hidden
 
 let g:LanguageClient_settingsPath = expand('~/.config/nvim/settings.json')
 let g:LanguageClient_serverCommands = {
-    \ 'c': ['ccls', '--log-file=/tmp/cc.log'],
-    \ 'cpp': ['ccls', '--log-file=/tmp/cc.log'],
+    \ 'c': ['ccls', '--log-file=/tmp/ccls.log'],
+    \ 'cpp': ['ccls', '--log-file=/tmp/ccls.log'],
     \ 'java': ['jdtls'],
     \ 'haskell': ['hie-wrapper', '-d', '-l', '/tmp/hie.log'],
     \ 'python': ['pyls', '-v', '--log-file','/tmp/pyls.log'],
