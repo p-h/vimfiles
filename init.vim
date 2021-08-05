@@ -24,7 +24,6 @@ Plug 'OmniSharp/omnisharp-vim'
 Plug 'pbrisbin/html-template-syntax'
 Plug 'Raimondi/delimitMate'
 Plug 'rhysd/vim-clang-format'
-Plug 'rust-lang-nursery/rls'
 Plug 'rust-lang/rust.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
@@ -71,7 +70,7 @@ let g:LanguageClient_serverCommands = {
     \ 'java': ['jdtls'],
     \ 'haskell': ['hie-wrapper', '-d', '-l', '/tmp/hie.log'],
     \ 'python': ['pyls', '-v', '--log-file','/tmp/pyls.log'],
-    \ 'rust': ['rustup', 'run', 'stable', 'rls'],
+    \ 'rust': ['rust-analyzer'],
     \}
 
 nnoremap <F5> :call LanguageClient_contextMenu()<CR>
