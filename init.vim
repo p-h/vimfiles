@@ -15,7 +15,7 @@ Plug 'junegunn/vim-easy-align'
 Plug 'kien/ctrlp.vim'
 Plug 'lervag/vimtex'
 Plug 'leshill/vim-json'
-Plug 'liuchengxu/vista.vim'"
+Plug 'liuchengxu/vista.vim'
 Plug 'luochen1990/rainbow'
 Plug 'mileszs/ack.vim'
 Plug 'OmniSharp/omnisharp-vim'
@@ -134,7 +134,10 @@ if has("cscope")
 endif
 
 nnoremap <C-S-N> :NERDTreeToggle<CR>
+
+let g:vista_default_executive = "lcn"
 nnoremap <F8> :Vista!!<CR>
+
 nnoremap <F3> :%s/\C\<<C-r><C-w>\>/
 
 nmap ga <Plug>(EasyAlign)
