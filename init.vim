@@ -37,6 +37,7 @@ Plug 'tpope/vim-surround'
 Plug 'vim-scripts/a.vim'
 Plug 'vim-scripts/matchit.zip'
 Plug 'vim-scripts/paredit.vim'
+Plug 'vim-syntastic/syntastic'
 
 call plug#end()
 
