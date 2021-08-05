@@ -10,6 +10,7 @@ Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.s
 Plug 'avakhov/vim-yaml'
 Plug 'bitterjug/vim-colors-bitterjug'
 Plug 'dhruvasagar/vim-table-mode'
+Plug 'editorconfig/editorconfig-vim'
 Plug 'jpalardy/vim-slime'
 Plug 'junegunn/vim-easy-align'
 Plug 'kien/ctrlp.vim'
@@ -128,3 +129,5 @@ highlight ColorColumn ctermbg=red
 
 let g:ctrlp_custom_ignore = 'node_modules\|git'
 let g:ctrlp_working_path_mode = 0
+
+let g:EditorConfig_exclude_patterns = ['fugitive://.*']
