@@ -70,6 +70,7 @@ let g:LanguageClient_serverCommands = {
     \ 'java': ['jdtls'],
     \ 'go': ['gopls'],
     \ 'haskell': ['hie-wrapper', '-d', '-l', '/tmp/hie.log'],
+    \ 'perl': ['perl', '-MPerl::LanguageServer', '-e', 'Perl::LanguageServer::run'],
     \ 'python': ['pyls', '-v', '--log-file','/tmp/pyls.log'],
     \ 'rust': ['rust-analyzer'],
     \}
