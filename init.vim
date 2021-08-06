@@ -8,7 +8,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'ap/vim-css-color'
 Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
 Plug 'avakhov/vim-yaml'
-Plug 'bitterjug/vim-colors-bitterjug'
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
@@ -21,6 +20,7 @@ Plug 'liuchengxu/vista.vim'
 Plug 'LnL7/vim-nix'
 Plug 'luochen1990/rainbow'
 Plug 'mileszs/ack.vim'
+Plug 'nanotech/jellybeans.vim'
 Plug 'pbrisbin/html-template-syntax'
 Plug 'Raimondi/delimitMate'
 Plug 'rhysd/vim-clang-format'
@@ -93,7 +93,7 @@ let delimitMate_expand_space = 1
 set cursorcolumn
 set cursorline
 
-colorscheme bitterjug
+colorscheme jellybeans
 
 set number
 set relativenumber
