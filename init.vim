@@ -11,6 +11,7 @@ Plug 'avakhov/vim-yaml'
 Plug 'bitterjug/vim-colors-bitterjug'
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'jpalardy/vim-slime'
 Plug 'junegunn/vim-easy-align'
 Plug 'kien/ctrlp.vim'
@@ -67,6 +68,7 @@ let g:LanguageClient_serverCommands = {
     \ 'c': ['ccls', '--log-file=/tmp/ccls.log'],
     \ 'cpp': ['ccls', '--log-file=/tmp/ccls.log'],
     \ 'java': ['jdtls'],
+    \ 'go': ['gopls'],
     \ 'haskell': ['hie-wrapper', '-d', '-l', '/tmp/hie.log'],
     \ 'python': ['pyls', '-v', '--log-file','/tmp/pyls.log'],
     \ 'rust': ['rust-analyzer'],
