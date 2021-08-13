@@ -8,6 +8,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'ap/vim-css-color'
 Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
 Plug 'avakhov/vim-yaml'
+Plug 'buoto/gotests-vim'
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
