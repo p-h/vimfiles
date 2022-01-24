@@ -76,15 +76,23 @@ let g:LanguageClient_serverCommands = {
     \ 'rust': ['rust-analyzer'],
     \}
 
-nnoremap <F5> :call LanguageClient_contextMenu()<CR>
-nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
-nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
-nnoremap <buffer> <silent> gD <c-w>v:call LanguageClient#textDocument_definition()<CR>
-nnoremap <Leader>la :call LanguageClient#textDocument_codeAction()<CR>
-nnoremap <Leader>lb :call LanguageClient#textDocument_references()<CR>
-nnoremap <Leader>lf :call LanguageClient#textDocument_formatting()<CR>
-nnoremap <Leader>lk :call LanguageClient#textDocument_hover()<CR>
-nnoremap <Leader>ls :call LanguageClient#textDocument_documentSymbol()<CR>
+function LC_maps()
+    if has_key(g:LanguageClient_serverCommands, &filetype)
+        nmap <buffer> <silent> <F5> <Plug>(lcn-menu)
+        nmap <buffer> <silent> K <Plug>(lcn-hover)
+        nmap <buffer> <silent> gd <Plug>(lcn-definition)
+        nmap <buffer> <silent> <F2> <Plug>(lcn-rename)
+        nmap <buffer> <silent> gD <Plug>(lcn-type-definition)
+        nmap <buffer> <silent><Leader>la <Plug>(lcn-code-action)
+        nmap <buffer> <silent><Leader>lb <Plug>(lcn-references)
+        nmap <buffer> <silent><Leader>lf <Plug>(lcn-format)
+        nmap <buffer> <silent><Leader>ls <Plug>(lcn-symbols)
+        nmap <buffer> <silent><Leader>lh <Plug>(lcn-highlight)
+    endif
+endfunction
+
+autocmd FileType * call LC_maps()
+autocmd BufWritePre * :call LanguageClient#textDocument_formatting_sync()
 
 imap <C-k> <Plug>(neosnippet_expand_or_jump)
 smap <C-k> <Plug>(neosnippet_expand_or_jump)
