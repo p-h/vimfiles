@@ -84,15 +84,17 @@ function LC_maps()
         nmap <buffer> <silent> <F2> <Plug>(lcn-rename)
         nmap <buffer> <silent> gD <Plug>(lcn-type-definition)
         nmap <buffer> <silent><Leader>la <Plug>(lcn-code-action)
-        nmap <buffer> <silent><Leader>lb <Plug>(lcn-references)
+        vmap <buffer> <silent><Leader>la <Plug>(lcn-code-action)
+        nmap <buffer> <silent><Leader>lr <Plug>(lcn-references)
         nmap <buffer> <silent><Leader>lf <Plug>(lcn-format)
         nmap <buffer> <silent><Leader>ls <Plug>(lcn-symbols)
         nmap <buffer> <silent><Leader>lh <Plug>(lcn-highlight)
+
+        autocmd BufWritePre * :call LanguageClient#textDocument_formatting_sync()
     endif
 endfunction
 
 autocmd FileType * call LC_maps()
-autocmd BufWritePre * :call LanguageClient#textDocument_formatting_sync()
 
 imap <C-k> <Plug>(neosnippet_expand_or_jump)
 smap <C-k> <Plug>(neosnippet_expand_or_jump)
