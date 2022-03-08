@@ -90,8 +90,6 @@ function LC_maps()
         nmap <buffer> <silent><Leader>lf <Plug>(lcn-format)
         nmap <buffer> <silent><Leader>ls <Plug>(lcn-symbols)
         nmap <buffer> <silent><Leader>lh <Plug>(lcn-highlight)
-
-        autocmd BufWritePre * :call LanguageClient#textDocument_formatting_sync()
     endif
 endfunction
 
