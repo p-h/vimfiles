@@ -123,7 +123,9 @@ set softtabstop=4
 set nobackup
 set nofixendofline
 
-set hlsearch
+set foldmethod=syntax
+set foldnestmax=10
+set foldlevel=9
 
 nnoremap <C-S-N> :NERDTreeToggle<CR>
 
@@ -136,9 +138,6 @@ nmap ga <Plug>(EasyAlign)
 
 command Vr tabedit ~/.config/nvim/init.vim
 command Vt execute "tabedit ~/.config/nvim/ftplugin/" . &filetype . ".vim"
-
-set colorcolumn=80
-highlight ColorColumn ctermbg=red
 
 let g:ctrlp_custom_ignore = 'node_modules\|git'
 let g:ctrlp_working_path_mode = 0
