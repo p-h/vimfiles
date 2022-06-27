@@ -12,5 +12,9 @@
       }
     }
   },
-  "languageServerHaskell": {}
+  "gopls": {
+    "build.buildFlags": [
+      "-tags=linux"
+    ]
+  }
 }
