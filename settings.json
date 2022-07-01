@@ -13,6 +13,9 @@
     }
   },
   "gopls": {
+    "analyses": {
+      "structtag": false
+    },
     "build.buildFlags": [
       "-tags=linux"
     ]
