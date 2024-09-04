@@ -6,7 +6,6 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'airblade/vim-gitgutter'
 Plug 'ap/vim-css-color'
-Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
 Plug 'avakhov/vim-yaml'
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'editorconfig/editorconfig-vim'
@@ -21,6 +20,7 @@ Plug 'LnL7/vim-nix'
 Plug 'luochen1990/rainbow'
 Plug 'mileszs/ack.vim'
 Plug 'nanotech/jellybeans.vim'
+Plug 'neovim/nvim-lspconfig'
 Plug 'pbrisbin/html-template-syntax'
 Plug 'Raimondi/delimitMate'
 Plug 'rhysd/vim-clang-format'
@@ -64,37 +64,6 @@ let maplocalleader = "_"
 set laststatus=2
 
 set hidden
-
-let g:LanguageClient_settingsPath = expand('~/.config/nvim/settings.json')
-let g:LanguageClient_serverCommands = {
-    \ 'c': ['ccls', '--log-file=/tmp/ccls.log'],
-    \ 'cpp': ['ccls', '--log-file=/tmp/ccls.log'],
-    \ 'java': ['jdtls'],
-    \ 'go': ['gopls'],
-    \ 'haskell': ['hie-wrapper', '-d', '-l', '/tmp/hie.log'],
-    \ 'perl': ['perl', '-MPerl::LanguageServer', '-e', 'Perl::LanguageServer::run'],
-    \ 'python': ['pyls', '-v', '--log-file','/tmp/pyls.log'],
-    \ 'rust': ['rust-analyzer'],
-    \}
-
-function LC_maps()
-    if has_key(g:LanguageClient_serverCommands, &filetype)
-        nmap <buffer> <silent> <F5> <Plug>(lcn-menu)
-        nmap <buffer> <silent> K <Plug>(lcn-hover)
-        nmap <buffer> <silent> gd <Plug>(lcn-definition)
-        nmap <buffer> <silent> <F2> <Plug>(lcn-rename)
-        nmap <buffer> <silent> gD <Plug>(lcn-type-definition)
-        nmap <buffer> <silent><Leader>la <Plug>(lcn-code-action)
-        vmap <buffer> <silent><Leader>la <Plug>(lcn-code-action)
-        nmap <buffer> <silent><Leader>lr <Plug>(lcn-references)
-        nmap <buffer> <silent><Leader>li <Plug>(lcn-implementation)
-        nmap <buffer> <silent><Leader>lf <Plug>(lcn-format)
-        nmap <buffer> <silent><Leader>ls <Plug>(lcn-symbols)
-        nmap <buffer> <silent><Leader>lh <Plug>(lcn-highlight)
-    endif
-endfunction
-
-autocmd FileType * call LC_maps()
 
 imap <C-k> <Plug>(neosnippet_expand_or_jump)
 smap <C-k> <Plug>(neosnippet_expand_or_jump)
@@ -144,3 +113,47 @@ let g:ctrlp_custom_ignore = 'node_modules\|git'
 let g:ctrlp_working_path_mode = 0
 
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
+
+" TODO: find replacement for this mapping
+"nmap <buffer> <silent> <F5> <Plug>(lcn-menu)
+
+lua << EOF
+local opts = { buffer = bufnr, noremap = true, silent = true }
+vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
+vim.keymap.set('n', 'gD', vim.lsp.buf.type_definition, opts)
+vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
+vim.keymap.set('n', '<F2>', vim.lsp.buf.rename, opts)
+vim.keymap.set('n', '<Leader>la', vim.lsp.buf.code_action, opts)
+vim.keymap.set('v', '<Leader>la', vim.lsp.buf.code_action, opts)
+vim.keymap.set('n', '<Leader>lr', vim.lsp.buf.references)
+vim.keymap.set('n', '<Leader>li', vim.lsp.buf.implementation, opts)
+vim.keymap.set('n', '<Leader>lf', vim.lsp.buf.format, opts)
+vim.keymap.set('n', '<Leader>ls', vim.lsp.buf.document_symbol, opts)
+vim.keymap.set('n', '<Leader>lh', vim.lsp.buf.document_highlight, opts)
+
+local util = require 'lspconfig.util'
+
+require'lspconfig'.gopls.setup{cmd = {'gopls', '-v', 'serve', '-debug=localhost:6060', '-logfile=/tmp/gopls.log'}, root_dir = util.root_pattern("go.mod")}
+
+require'lspconfig'.pylsp.setup{
+    cmd = {'pylsp', '-v', '--log-file','/tmp/pyls.log'},
+    plugins = {
+      pyflakes = {
+        enabled = true
+      },
+      pydocstyle = {
+        enabled = true
+      },
+      black = {
+        enabled = true
+      },
+      flake8 = {
+        enabled = true
+      }
+    },
+}
+require'lspconfig'.perlpls.setup{cmd = {'nix-shell', '-p', 'perl538Packages.PLS', '--run', 'pls'}}
+require'lspconfig'.jdtls.setup{}
+require'lspconfig'.ccls.setup{}
+require'lspconfig'.rust_analyzer.setup{}
+EOF
