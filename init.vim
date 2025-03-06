@@ -20,6 +20,7 @@ Plug 'luochen1990/rainbow'
 Plug 'mileszs/ack.vim'
 Plug 'nanotech/jellybeans.vim'
 Plug 'neovim/nvim-lspconfig'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'pbrisbin/html-template-syntax'
 Plug 'Raimondi/delimitMate'
 Plug 'rhysd/vim-clang-format'
@@ -157,4 +158,12 @@ lspconfig.pylsp.setup{
 lspconfig.perlpls.setup{cmd = {'nix-shell', '-p', 'perl538Packages.PLS', '--run', 'pls'}}
 lspconfig.ccls.setup{}
 lspconfig.rust_analyzer.setup{}
+
+require'nvim-treesitter.configs'.setup {
+  disable = { "c" },
+  ensure_installed = { "lua", "rust", "vim", "vimdoc", "query", "markdown", "markdown_inline", "python" },
+    highlight = {
+    enable = false,
+    },
+}
 EOF
