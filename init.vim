@@ -134,8 +134,6 @@ vim.keymap.set('n', '<Leader>lh', vim.lsp.buf.document_highlight, opts)
 
 local util = require 'lspconfig.util'
 
-require'lspconfig'.gopls.setup{cmd = {'gopls', '-v', 'serve', '-debug=localhost:6060', '-logfile=/tmp/gopls.log'}, root_dir = util.root_pattern("go.mod")}
-
 require'lspconfig'.pylsp.setup{
     cmd = {'pylsp', '-v', '--log-file','/tmp/pyls.log'},
     plugins = {
