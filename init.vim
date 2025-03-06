@@ -9,7 +9,6 @@ Plug 'ap/vim-css-color'
 Plug 'avakhov/vim-yaml'
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'jpalardy/vim-slime'
 Plug 'junegunn/vim-easy-align'
 Plug 'kien/ctrlp.vim'
@@ -30,7 +29,6 @@ Plug 'scrooloose/nerdtree'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Shougo/neosnippet-snippets'
 Plug 'Shougo/neosnippet.vim'
-Plug 'Snyssfx/goerr-nvim'
 Plug 'tpope/vim-classpath'
 Plug 'tpope/vim-fireplace'
 Plug 'tpope/vim-fugitive'
@@ -41,6 +39,12 @@ Plug 'vim-scripts/a.vim'
 Plug 'vim-scripts/matchit.zip'
 Plug 'vim-scripts/paredit.vim'
 Plug 'vim-syntastic/syntastic'
+
+if has('macunix') " I'm at work
+    Plug 'bazelbuild/vim-bazel'
+    Plug 'google/vim-maktaba'
+    Plug 'Snyssfx/goerr-nvim'
+endif
 
 call plug#end()
 
