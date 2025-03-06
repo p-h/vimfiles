@@ -97,10 +97,6 @@ set softtabstop=4
 set nobackup
 set nofixendofline
 
-set foldmethod=syntax
-set foldnestmax=10
-set foldlevel=9
-
 nnoremap <C-S-N> :NERDTreeToggle<CR>
 
 let g:vista_default_executive = "lcn"
