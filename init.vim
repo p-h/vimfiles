@@ -132,9 +132,12 @@ vim.keymap.set('n', '<Leader>lf', vim.lsp.buf.format, opts)
 vim.keymap.set('n', '<Leader>ls', vim.lsp.buf.document_symbol, opts)
 vim.keymap.set('n', '<Leader>lh', vim.lsp.buf.document_highlight, opts)
 
+local lspconfig = require 'lspconfig'
 local util = require 'lspconfig.util'
 
-require'lspconfig'.pylsp.setup{
+lspconfig.gopls.setup{cmd = {'gopls', '-v', 'serve', '-debug=localhost:6060', '-logfile=/tmp/gopls.log'}, root_dir = util.root_pattern("go.mod")}
+
+lspconfig.pylsp.setup{
     cmd = {'pylsp', '-v', '--log-file','/tmp/pyls.log'},
     plugins = {
       pyflakes = {
@@ -151,8 +154,7 @@ require'lspconfig'.pylsp.setup{
       }
     },
 }
-require'lspconfig'.perlpls.setup{cmd = {'nix-shell', '-p', 'perl538Packages.PLS', '--run', 'pls'}}
-require'lspconfig'.jdtls.setup{}
-require'lspconfig'.ccls.setup{}
-require'lspconfig'.rust_analyzer.setup{}
+lspconfig.perlpls.setup{cmd = {'nix-shell', '-p', 'perl538Packages.PLS', '--run', 'pls'}}
+lspconfig.ccls.setup{}
+lspconfig.rust_analyzer.setup{}
 EOF
